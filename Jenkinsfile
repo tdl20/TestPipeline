@@ -18,5 +18,12 @@ pipeline {
         dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'
       }
     }
+    stage('SonarQube analysis') {
+      steps {
+        withSonarQubeEnv(credentialsId: '	sonarqube-token', installationName: 'SonarQube') {
+           bat 'mvn sonar:sonar -Dsonar.dependencyCheck.jsonReportPath=target/dependency-check-report.json -Dsonar.dependencyCheck.xmlReportPath=target/dependency-check-report.xml -Dsonar.dependencyCheck.htmlReportPath=target/dependency-check-report.html'
+        }
+      }
+    }
   }
 }
