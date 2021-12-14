@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-          bat "mvn -Dmaven.test.failure.ignore=true clean package"
+          bat "mvn clean install -Dmaven.test.skip=true"
         }
       }
      stage ('OWASP Dependency-Check Vulnerabilities') {
