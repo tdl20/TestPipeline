@@ -28,7 +28,6 @@ pipeline {
     stage('Deploy') {
       steps {
          bat "copy target\\Milestone1B-0.0.1-SNAPSHOT.war \"${tomcatweb}\\Milestone1b.war\""
-        }
       }
     }
   }
