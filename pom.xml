@@ -41,6 +41,7 @@
     </dependencies>
 
     <build>
+        <finalName>Milestone1B</finalName>
         <plugins>
              <plugin>
                 <groupId>org.owasp</groupId>
