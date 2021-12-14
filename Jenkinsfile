@@ -4,7 +4,7 @@ pipeline {
   tools {
     maven 'Maven3.8.4'
   }
-
+  def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0_Tomcat10.0\\webapps'
   stages {
     stage('Build') {
       steps {
@@ -27,8 +27,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sshagent(['deploy_tomcat']) {
-          scp -o StrictHostKeyChecking=no target/Milestone1B-0.0.1-SNAPSHOT.war tomcat@localhost:'C:/Program Files/Apache Software Foundation/Tomcat 10.0_Tomcat10.0/webapps'
+         bat "copy target\\Milestone1B-0.0.1-SNAPSHOT.war \"${tomcatweb}\\Milestone1b.war\""
         }
       }
     }
