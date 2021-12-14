@@ -1,10 +1,10 @@
+def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0_Tomcat10.0\\webapps'
 pipeline {
   agent any
 
   tools {
     maven 'Maven3.8.4'
   }
-  def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0_Tomcat10.0\\webapps'
   stages {
     stage('Build') {
       steps {
