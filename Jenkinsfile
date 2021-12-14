@@ -27,7 +27,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-         bat '''copy target\\Milestone1B-0.0.1-SNAPSHOT.war ${tomcatweb}'''
+         bat '''copy target\\Milestone1B-0.0.1-SNAPSHOT.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0_Tomcat10.0\\webapps\\Milestone1b.war"'''
       }
     }
   }
