@@ -28,7 +28,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sshagent(['deploy_tomcat']) {
-          scp -o StrictHostKeyChecking=no target/Milestone1B-0.0.1-SNAPSHOT.war tomcat@localhost:C:/Program Files/Apache Software Foundation/Tomcat 10.0_Tomcat10.0/webapps
+          scp -o StrictHostKeyChecking=no target/Milestone1B-0.0.1-SNAPSHOT.war tomcat@localhost:'C:/Program Files/Apache Software Foundation/Tomcat 10.0_Tomcat10.0/webapps'
         }
       }
     }
