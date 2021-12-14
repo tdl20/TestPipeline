@@ -1,4 +1,4 @@
-def tomcatWeb = '''C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0_Tomcat10.0\\webapps\\Milestone1b.war'''
+def tomcatWeb = '''C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\Milestone1b.war'''
 pipeline {
   agent any
 
